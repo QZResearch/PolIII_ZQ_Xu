@@ -1,5 +1,6 @@
 # PolIII_ZQ_Xu
-Files for ZQXu's Project
+
+``Structural basis of high-processivity high-fidelity DNA replication by Escherichia coli DNA polymerase III'' Xu et al. DOI: to be updated
 
 ## structures
 
