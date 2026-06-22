@@ -1,0 +1,5 @@
+parm J97_total.prmtop 
+hmassrepartition 
+parmwrite out J97_total_hmass.prmtop 
+go 
+quit

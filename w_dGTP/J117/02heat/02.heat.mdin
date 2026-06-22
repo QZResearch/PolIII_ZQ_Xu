@@ -1,0 +1,31 @@
+MD simulation
+&cntrl
+imin=0,	! Perform MD
+nstlim=50000,	!Number of MD steps
+dt=0.001,		! timestep = 2 fs
+ntx=1,			! read the coordinates from the "inpcrd" file
+irest=0,
+ntpr=10000,
+ntwr=10000,
+ntwx=10000,
+
+tempi=100.0,
+temp0=310.0,
+ntt=1,			! using Berendsen coupling algorithm to maintain constant temperature
+tautp=2.0,		! The time constant for T coupling is 2 ps
+ig=-1			! Random seed for thermostat
+
+ntb=1,			! periodic boundary with constant volume
+ntp=0,			! no pressure control
+
+ntc=2,			! Bonds involving hydrogen are constrained with SHAKE algorithm
+ntf=2,			! Bond interactions involving H-atoms omitted (use with NTC=2)
+
+ntr=1,			! Turn on restraints
+!restraintmask="@CA,P,C3',C4',C5',O3',O5'", !atoms to be restrained
+restraintmask="@CA,P", !atoms to be restrained
+restraint_wt=5.0,				! force constant for restraint
+
+iwrap=1,		! iwrap is turned on
+/
+
