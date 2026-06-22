@@ -1,0 +1,16 @@
+Minimize all the hydrogens
+&cntrl
+	imin=1,
+	ncyc=5000,
+	maxcyc=10000,
+	ntb=1, ! Constant volume
+	ntp=0, ! No pressure scaling
+	ntf=1, ! Complete force evaluation
+	ntwx=500, ! Write to trajectory file every ntwx steps
+	ntpr=500, ! Print to mdout every ntpr steps
+	ntwr=500, ! Write a restart file every ntwr steps
+	ntr=1,		! Turn on restraints
+	!restraintmask="@CA,P,C3',C4',C5',O3',O5'", ! atoms to be restrained
+	restraintmask="@CA,P", ! atoms to be restrained
+	restraint_wt=5,				! force constant for restraint
+/

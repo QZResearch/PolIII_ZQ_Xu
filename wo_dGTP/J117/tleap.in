@@ -1,0 +1,32 @@
+source oldff/leaprc.ff14SB
+
+addAtomTypes {
+    { "C7"  "C" "sp3" }
+    { "CJ"  "C" "sp3" }
+        { "C1"  "C" "sp2" }
+        { "C2"  "C" "sp2" }
+}
+
+loadoff ff-DNA-OL24/ff-nucleic-OL24.lib
+loadamberparams ff-DNA-OL24/ff-nucleic-OL24.frcmod
+
+# for capping 5'-term of DNA with PO3H
+#loadoff terminal_monophosphate.lib
+
+
+source leaprc.water.spce
+
+total = loadpdb J117_initial.amber.pdb
+
+check total
+
+#savepdb total J117_total.pdb
+
+solvatebox total SPCBOX 14.0
+addIons total MG 22
+addIons total NA 200
+addIons total CL 114 
+#
+saveamberparm total J117_total.prmtop J117_total.inpcrd
+
+quit

@@ -1,0 +1,17 @@
+Constant pressure constant temperature equilibration state 2
+&cntrl
+nstlim=12500000, dt=0.004, 
+ntx=5, irest=1, ! use the velocity information from the restart file
+ntpr=125000,ntwr=125000,ntwx=125000,
+temp0=310.0, ntt=3, gamma_ln=3.,
+
+ntb=2, 			! switched on constant pressure
+ntp=1, 			! isotropic position scaling
+taup=2.,
+
+
+ntc=2,			! Bonds involving hydrogen are constrained with SHAKE algorithm
+ntf=2,			! Bond interactions involving H-atoms omitted (use with NTC=2)
+
+iwrap=1,
+&end
