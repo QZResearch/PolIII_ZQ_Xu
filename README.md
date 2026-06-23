@@ -2,7 +2,7 @@
 
 ``Structural basis of high-processivity high-fidelity DNA replication by Escherichia coli DNA polymerase III'' Xu et al. DOI: to be updated
 
-## structures
+## structures (will be released once the manuscript is accepted)
 
 Structures resolved from experiment
 
